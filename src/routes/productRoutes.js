@@ -1,7 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
+const { protect } = require("../middlewares/authMiddleware");
 
+
+
+
+// Apply the protect middleware to all product routes
+router.use(protect);
 
 
 // Create a new product
