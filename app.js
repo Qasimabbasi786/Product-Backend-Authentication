@@ -14,8 +14,8 @@ connectDB();
 app.use(express.json());
 
 // 3. Routes
-app.use('/api', productRoutes);
 app.use('/api/auth', authRoutes)
+app.use('/api', productRoutes);
 
 
 app.listen(PORT, () => {
